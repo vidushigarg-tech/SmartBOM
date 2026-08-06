@@ -2,7 +2,7 @@
 
 # 📦 SmartBOM — Automated Bill of Materials System
 
-**Automatically generate accurate BOM data straight from engineering drawings.**
+**Automatically generate accurate Bill of Materials (BOM) data directly from engineering drawings.**
 
 ![Status](https://img.shields.io/badge/status-active-success?style=flat-square)
 ![Version](https://img.shields.io/badge/version-1.1.0-blue?style=flat-square)
@@ -13,102 +13,157 @@
 
 ---
 
-## 🧩 Overview
+# 🧩 Overview
 
-**SmartBOM** is a Python-based system that reads engineering drawing files and automatically generates Bill of Materials (BOM) data in CSV format. It was built to eliminate manual, error-prone BOM creation in production and manufacturing workflows — reducing effort while improving accuracy in component extraction and production planning.
+**SmartBOM** is a professional Python desktop application that automates the generation of Bill of Materials (BOM) directly from engineering drawings.
 
-> 🔒 **Note:** This repository is a project showcase. Full source code is maintained in a private repository and is available on request (for recruiters/collaborators) — please reach out via [email](mailto:gargvidushi06@gmail.com) or [LinkedIn](https://linkedin.com/in/vidushigarg).
+The application eliminates manual BOM preparation by automatically extracting component information from DWG engineering drawings and generating structured CSV output for production planning.
 
----
-
-## ✨ Key Features
-
-- 📄 **DWG file support** — reads ZWCAD-compatible `.dwg` engineering drawings directly
-- 📊 **One-click BOM generation** — converts DWG drawing data into a clean, structured CSV file
-- ⚖️ **Automatic extraction** — pulls weights, surface area, and quantities straight from the drawing
-- 🔐 **Admin Panel** — manage standard sections, update unit weights, and maintain database entries
-- 🗄️ **Database integration** — stores and tracks BOM records for efficient retrieval and version history
-- ✅ **Accuracy improvement** — reduces manual data-entry errors in component extraction
-- ⚙️ **Production planning support** — structured BOM output feeds directly into planning workflows
+> 🔒 **Note:** This repository showcases the project architecture, features, and user interface. The complete source code is not publicly available because it contains proprietary business logic developed for a real-world application. I would be happy to discuss the implementation, architecture, and technical decisions during an interview.
 
 ---
 
-## 🖥️ Screenshots
+# ✨ Key Features
 
-<div align="center">
-
-**Splash Screen**
-<br>
-<img src="screenshots/splash-screen.png" width="500" alt="SmartBOM splash screen">
-
-<br><br>
-
-**Welcome / Action Selection**
-<br>
-<img src="screenshots/welcome-screen.png" width="700" alt="SmartBOM welcome screen">
-
-<br><br>
-
-**DWG File Selection**
-<br>
-<img src="screenshots/file-selection.png" width="700" alt="SmartBOM file selection screen">
-
-</div>
+- 📄 Read ZWCAD-compatible **DWG engineering drawings**
+- ⚡ One-click automated **Bill of Materials generation**
+- 📊 Export structured BOM directly to **CSV**
+- ⚖ Automatically extract:
+  - Weight
+  - Surface Area
+  - Quantity
+  - Standard Sections
+- 🔐 Secure Admin Panel for database management
+- 🗄 SQLite database integration
+- ✅ Reduce manual errors
+- 🏭 Designed for manufacturing and production workflows
 
 ---
 
-## 🏗️ Architecture (High-Level)
+# 📸 Screenshots
 
+## Splash Screen
+
+<p align="center">
+<img src="screenshots/splash-screen.png" width="500">
+</p>
+
+---
+
+## Main Dashboard
+
+<p align="center">
+<img src="screenshots/welcome-screen.png" width="800">
+</p>
+
+---
+
+## DWG File Selection
+
+<p align="center">
+<img src="screenshots/file-selection.png" width="800">
+</p>
+
+---
+
+# 🏗 System Workflow
+
+```text
+Engineering Drawing (.DWG)
+            │
+            ▼
+      Drawing Parser
+       (Python + ezdxf)
+            │
+            ▼
+ Component Extraction
+            │
+            ▼
+ Data Validation &
+ Normalization
+            │
+            ▼
+ SQLite Database
+            │
+            ▼
+ CSV BOM Generation
+            │
+            ▼
+ Production Planning
 ```
-Engineering Drawing Files
-          │
-          ▼
-   Parsing / Extraction Engine  (Python)
-          │
-          ▼
-   Component Data Normalization
-          │
-          ▼
-   ┌───────────────┐       ┌────────────────┐
-   │  CSV BOM File │  <──  │  Database Layer │
-   └───────────────┘       └────────────────┘
-          │
-          ▼
-   Production Planning Systems
-```
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠 Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Core Logic | Python |
-| Data Storage | Database integration (SQL) |
+| Category | Technology |
+|-----------|------------|
+| Programming Language | Python |
+| GUI Framework | Tkinter |
+| CAD Drawing Processing | ezdxf |
+| Database | SQLite |
+| Data Processing | Pandas |
 | Output Format | CSV |
-| Version Control | Git |
+| Desktop Packaging | PyInstaller |
+| CAD Software | ZWCAD |
 
 ---
 
-## 📈 Impact
+# 📂 Repository Structure
+
+```text
+SmartBOM
+│
+├── README.md
+├── screenshots
+│   ├── splash-screen.png
+│   ├── welcome-screen.png
+│   └── file-selection.png
+│
+├── docs
+│
+├── LICENSE
+│
+└── .gitignore
+```
+
+---
+
+# 📈 Project Impact
 
 - Reduced manual effort in BOM creation
-- Improved accuracy in component extraction
-- Streamlined production planning workflows
+- Improved component extraction accuracy
+- Faster engineering documentation
+- Streamlined production planning workflow
+- Increased productivity through automation
 
 ---
 
-## 📌 Project Status
+# 🚀 Future Enhancements
 
-**Active development** — ongoing since December 2025.
+- Excel Export
+- PDF BOM Reports
+- ERP Integration
+- Multi-user Support
+- Cloud-based Deployment
+- Advanced Reporting Dashboard
 
 ---
 
-## 📬 Contact
+# 📌 Project Status
 
-Interested in the technical implementation, a code walkthrough, or a live demo?
+**Version:** 1.1.0
 
-- 📧 gargvidushi06@gmail.com
-- 🔗 [LinkedIn](https://linkedin.com/in/vidushigarg)
-- 💻 [GitHub](https://github.com/vidushigarg-tech)
+**Status:** Active Development
 
+---
+
+# 📬 Contact
+
+Interested in a technical discussion, architecture walkthrough, or live demonstration?
+
+📧 **Email:** gargvidushi06@gmail.com
+
+💼 **LinkedIn:** https://www.linkedin.com/in/vidushi-garg-a7b0a7256
+
+💻 **GitHub:** https://github.com/vidushigarg-tech
